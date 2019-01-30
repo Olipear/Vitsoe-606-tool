@@ -1,0 +1,204 @@
+@import './Mixins.scss';
+@import './Variables.scss';
+@import './Fonts.scss';
+
+$font-family: 'Linotype Univers W01', Helvetica, Arial, sans-serif;
+$font-size-small: 16px;
+$font-size-large: 32px;
+$line-height-small: 20px;
+$line-height-large: 40px;
+$margin-bottom-only: 0 0 20px 0;
+$arrow-size: 26px;
+
+.btn {
+  border-radius: 2px;
+  border-width: 0px;
+  color: black;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 700;
+  font-size: $font-size-small;
+  line-height: $line-height-small;
+  margin: $margin-bottom-only;
+  padding: 10px 15px;
+  text-align: center;
+  vertical-align: middle;
+  white-space: normal;
+  width: 100%;
+  vertical-align: middle;
+
+  &.arrow-before {
+    &:before {
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: $arrow-size $arrow-size;
+      content: '';
+      display: inline-block;
+      height: $line-height-small;
+      vertical-align: top;
+      width: $arrow-size;
+      background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%20enable-background%3D%22new%200%200%2064%2064%22%3E%3Cpath%20fill%3D%22%230073b1%22%20d%3D%22M49.6%2030h-30.3l10.7-10.6c.8-.8.8-2%200-2.8-.8-.8-2-.8-2.8%200l-15.6%2015.4%2015.7%2015.4c.4.4.9.6%201.4.6.5%200%201-.2%201.4-.6.8-.8.8-2.1%200-2.8l-10.8-10.6h30.3c1.1%200%202-.9%202-2s-.9-2-2-2z%22%2F%3E%3C%2Fsvg%3E');
+      filter: brightness(0) invert(1);
+    }
+  }
+
+  &.yellow {
+    background-color: $revenue-colour;
+    border-color: $revenue-colour;
+
+    &:hover {
+      background-color: $revenue-hover;
+    }
+  }
+
+  &.blue {
+    background-color: $button-colour;
+    border-collapse: $button-colour;
+    color: white;
+
+    &:hover {
+      background-color: $button-hover;
+    }
+  }
+
+  &:nth-child(1) {
+    margin-top: 0;
+  }
+}
+
+.end-page {
+  &-container {
+    line-height: $line-height-small;
+
+    margin-top: $line-height-large !important;
+    @include small {
+      width: 95%;
+      margin: 0 auto;
+    }
+    @include medium {
+      width: 80%;
+    }
+    @include large {
+      width: 890px;
+    }
+    @include xlarge {
+      width: 1020px;
+    }
+    @include xxlarge {
+      width: 1200px;
+    }
+  }
+
+  &-content {
+    display: flex;
+    flex-wrap: nowrap;
+    .column-1 {
+      flex: 0 33%;
+      margin-right: 40px;
+    }
+    .column-2 {
+      flex: 0 66%;
+    }
+    .column-split {
+      flex: 0 48%;
+      &:nth-child(1) {
+        margin-right: 30px;
+      }
+    }
+
+    .container {
+      margin-top: 40px;
+      .label {
+        margin-bottom: $baseline / 2;
+      }
+      .text {
+        font-size: $font-size-large;
+      }
+      .finish-dropdown {
+        margin-top: 0px;
+        div {
+          margin-bottom: 0px;
+        }
+      }
+    }
+
+    .system {
+      &-dimensions {
+        display: inline-block;
+        width: 33%;
+        &-labels {
+          display: block;
+          font-weight: bold;
+          font-size: $font-size-small;
+          margin-bottom: $baseline / 2;
+        }
+
+        &-text {
+          font-size: $font-size-small;
+        }
+      }
+
+      &-image-container {
+        border: 1px solid $grey-4;
+        height: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .structure-container {
+          align-items: center;
+          justify-content: center;
+          .wall-grid {
+            border: none;
+          }
+          .floor-container {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .submit-enquiry {
+      margin-top: $line-height-small;
+    }
+
+    .summary-container {
+      display: flex;
+      margin-top: $line-height-small;
+      .component-breakdown {
+        &-list {
+          margin-top: 5px;
+        }
+        &-item {
+          display: flex;
+          justify-content: space-between;
+          margin-top: 5px;
+          span:first-child {
+            flex: 0 1 60%;
+          }
+          span:last-child {
+            flex: 0 1 30%;
+            text-align: right;
+          }
+        }
+      }
+      .total-estimate {
+        &-container {
+          margin-top: 10px;
+          padding-top: 10px;
+          border-top: 1px solid $keyline-grey;
+        }
+        &-row {
+          h4 {
+            display: inline-block;
+          }
+          span {
+            float: right;
+          }
+        }
+        &-disclaimer {
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+}

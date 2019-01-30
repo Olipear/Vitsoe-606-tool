@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+
+  react:
+    image: node:10.14.1
+    working_dir: /app
+    volumes:
+      - "./:/app"
+    entrypoint: ./docker-entrypoint.sh
+    ports:
+      - "3000:3000"

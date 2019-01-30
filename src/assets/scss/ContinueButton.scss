@@ -1,0 +1,17 @@
+@keyframes continueslidein {
+  0% {
+    right: -50px;
+  }
+  100% {
+    right: 20px;
+  }
+}
+
+.continue-button {
+  position: fixed;
+  top: 50%;
+  right: 20px;
+  height: 40px;
+  width: 40px;
+  animation: continueslidein 1s cubic-bezier(0.18, 0.89, 0.32, 1.28) 0.5;
+}

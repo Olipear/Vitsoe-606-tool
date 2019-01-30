@@ -1,0 +1,26 @@
+.structure-container {
+  height: calc(100% - 70px);
+  flex: 1 1 auto;
+  display: flex;
+  box-sizing: border-box;
+  margin: 0 0 70px 0;
+  min-width: 0;
+  .wall-grid {
+    border: 1px dashed black;
+    margin: 0 auto;
+    align-self: center;
+    position: relative;
+  }
+  .floor-container {
+    position: absolute;
+    width: 100%;
+    bottom: -37px;
+    border-top: 2px solid $grey-1;
+    text-align: center;
+    padding-top: 10px;
+    background-image: url('../img/icons/Line\ 45deg.svg');
+    background-repeat: repeat-x;
+    background-size: 10px;
+    background-position: top;
+  }
+}

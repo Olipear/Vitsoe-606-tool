@@ -1,0 +1,24 @@
+<svg id="tell_us" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 22">
+  <defs>
+    <style>
+      .cls-1, .cls-3 {
+        fill: none;
+      }
+
+      .cls-1 {
+        stroke: #0073b1;
+        stroke-miterlimit: 10;
+        stroke-width: 2px;
+      }
+
+      .cls-2 {
+        stroke: none;
+      }
+    </style>
+  </defs>
+  <g id="Ellipse_121" data-name="Ellipse 121" class="cls-1">
+    <circle class="cls-2" cx="11" cy="11" r="11"/>
+    <circle class="cls-3" cx="11" cy="11" r="10"/>
+  </g>
+  <path id="Path_1123" data-name="Path 1123" class="cls-1" d="M11,16V9m0-1.9v-2"/>
+</svg>

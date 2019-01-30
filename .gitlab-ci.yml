@@ -1,0 +1,19 @@
+image: node:10.14.1
+
+cache:
+  paths:
+    - node_modules/
+
+before_script:
+  - yarn --frozen-lockfile
+
+pages:
+  variables:
+    API_BASE: https://vitsoe-606-experience.herokuapp.com
+  script:
+    - yarn build
+  artifacts:
+    paths:
+      - public
+  only:
+    - master

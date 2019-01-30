@@ -1,0 +1,33 @@
+.app {
+  .Dropdown{
+    &-root {
+      padding: 0;
+      display: inline-block;
+    }
+    &-control {
+      padding: 3px 40px 2px 10px;
+      border-color: $blue;
+      cursor: pointer;
+    }
+    &-arrow {
+      top: 5px;
+      right: 14px;
+      background: transparent url('../img/icons/arrow-right-blue.svg') center/contain no-repeat;
+      transform: rotate(90DEG);
+      width: 10px;
+      height: 14px;
+      border: none;
+    }
+    &-placeholder {
+      color: $blue;
+    }
+  }
+
+  .Dropdown-root.finishDropdown {
+    width: 180px;
+  }
+
+  .Dropdown-root.unitDropdown {
+    width: 150px;
+  }
+}

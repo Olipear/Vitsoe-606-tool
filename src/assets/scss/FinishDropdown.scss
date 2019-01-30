@@ -1,0 +1,64 @@
+@import './Mixins.scss';
+@import './Variables.scss';
+
+.app {
+  .finish-dropdown {
+    z-index: 9000;
+    width: 208px;
+    background-color: transparent;
+
+    &__control {
+      background-color: transparent;
+      cursor: pointer;
+    }
+
+    &__menu {
+      background-color: $grey-3;
+      box-shadow: none;
+      border-radius: 2px;
+    }
+    &__option--is-selected {
+      background-color: transparent;
+      color: $blue;
+    }
+    &__dropdown-indicator {
+      svg {
+        fill: $blue;
+        stroke: $blue;
+      }
+    }
+    &__option--is-focused {
+      background-color: transparent;
+      transition: all 0.3s ease-in-out 0s;
+      color: $darker-blue;
+      font-weight: 900;
+      img {
+        transform: scale(1.2);
+      }
+    }
+
+    div {
+      margin: 0;
+      border: 0;
+    }
+
+    .finish-dropdown__control--is-focused {
+      box-shadow: none;
+    }
+
+    .finish-dropdown__indicator-separator {
+      display: none;
+    }
+
+    .finish-dropdown__input {
+      padding-left: 33px;
+      caret-color: transparent;
+    }
+  }
+  .end-page-container {
+    .finish-dropdown__menu {
+      background-color: $white;
+      border: 1px solid $grey-1;
+    }
+  }
+}
