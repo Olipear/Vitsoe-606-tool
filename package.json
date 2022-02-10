@@ -59,7 +59,7 @@
     "jest": "^23.6.0",
     "json-rules-engine": "^2.3.2",
     "lodash": "^4.17.11",
-    "node-sass": "^4.10.0",
+    "node-sass": "^7.0.0",
     "react": "^16.6.3",
     "react-addons-test-utils": "^15.6.2",
     "react-copy-to-clipboard": "^5.0.1",
